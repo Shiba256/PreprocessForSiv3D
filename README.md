@@ -17,6 +17,9 @@
 `Functions.h`及び`Main.as`を用意します。
 - Functions.h
 ```C++
+#ifndef _FUNCTION_H_
+#define _FUNCTION_H_
+
 #define CIRCLE_R 6.0
 
 /// @brief 単位円に点が含まれているか判定します
@@ -28,6 +31,9 @@ bool inCircle(double x, double y) {
 double getPi(double allNum, double inCircleNum) {
 	return    4.0 * inCircleNum / allNum;
 }
+
+#endif // !_FUNCTION_H_
+
 ```
 - Main.as
 ```C++
@@ -82,7 +88,6 @@ void Main() {
 
 処理後のコード
 ```C++
-
 /// @brief 単位円に点が含まれているか判定します
 bool inCircle(double x, double y) {
 return (x * x + y * y <= 6.0 * 6.0);
@@ -92,6 +97,7 @@ return (x * x + y * y <= 6.0 * 6.0);
 double getPi(double allNum, double inCircleNum) {
 return    4.0 * inCircleNum / allNum;
 }
+
 
 
 int counter = 0;

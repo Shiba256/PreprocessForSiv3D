@@ -80,4 +80,39 @@ void Main() {
 }
 ```
 
+処理後のコード
+```C++
+
+/// @brief 単位円に点が含まれているか判定します
+bool inCircle(double x, double y) {
+return (x * x + y * y <= 6.0 * 6.0);
+}
+
+/// @brief 円周率を計算します
+double getPi(double allNum, double inCircleNum) {
+return    4.0 * inCircleNum / allNum;
+}
+
+
+int counter = 0;
+int inCircleCounter = 0;
+
+Font font(50);
+
+void update(){
+counter++;
+if(inCircle(6.0*Random(),6.0*Random())){
+inCircleCounter++;
+}
+font(getPi(counter,inCircleCounter)).drawAt(Scene::Center());
+
+ClearPrint();
+Print << "円の半径は" << 6.0 << "です";
+
+
+Print << "CIRCLE_R は #undef されました";
+
+}
+```
+
 ---

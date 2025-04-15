@@ -1,4 +1,7 @@
-﻿#define CIRCLE_R 6.0
+﻿#ifndef _FUNCTION_H_
+#define _FUNCTION_H_
+
+#define CIRCLE_R 6.0
 
 /// @brief 単位円に点が含まれているか判定します
 bool inCircle(double x, double y) {
@@ -10,3 +13,4 @@ double getPi(double allNum, double inCircleNum) {
 	return    4.0 * inCircleNum / allNum;
 }
 
+#endif // !_FUNCTION_H_

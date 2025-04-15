@@ -102,14 +102,17 @@ namespace pps {
 	}
 
 	void Preprocessor::preprocess(FilePathView path, TextWriter& writer) {
+		this->p_impl->macroProcessor.clear();
 		this->p_impl->preprocess(path, writer);
 	}
 
 	void Preprocessor::preprocess(FilePathView path, String& code) {
+		this->p_impl->macroProcessor.clear();
 		this->p_impl->preprocess(path, code);
 	}
 
 	String Preprocessor::preprocess(FilePathView path) {
+		this->p_impl->macroProcessor.clear();
 		String code = U"";
 		this->p_impl->preprocess(path, code);
 		return code;

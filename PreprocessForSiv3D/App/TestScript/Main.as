@@ -1,5 +1,7 @@
 #include"Functions.h"
 
+#include"Functions.h"
+
 int counter = 0;
 int inCircleCounter = 0;
 

@@ -38,6 +38,11 @@ namespace pps {
 			return definedMacros.contains(name) || definedMacroFunctions.contains(name);
 		}
 
+		inline void clear() {
+			definedMacros.clear();
+			definedMacroFunctions.clear();
+		}
+
 	private:
 		HashTable<String, String> definedMacros;
 		HashTable<String, String> definedMacroFunctions;
